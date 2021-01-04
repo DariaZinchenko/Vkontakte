@@ -3,19 +3,29 @@ package domain;
 public class Post {
     private int id;
     private int ownerId;
-    private int amountOfViews;
-    private int publicationTime;
-    private Privacy privacy;
-    private int[] whoCanSeeId;
-    private Subject subject;
-    private int[] whoRepostId;
-    private int[] whoLikedId;
-    private CommentInfo[] commentsInfoId;
-    private String content;
-    private boolean isCommentable;
-    private boolean isSendNotification;
-    private String source;
-    private int copyrightUserId;
+    private int fromId;
+    private int createdById;
+    private int date;
+    private String text;
+    private int replyOwnerId;
+    private int replyPostId;
+    private boolean friendsOnly;
+    private CommentsInfo commentsInfo;
+    private CopyrightInfo copyrightInfo;
+    private LikesInfo likesInfo;
+    private RepostsInfo repostsInfo;
+    private ViewsInfo viewsInfo;
+    private String postType;
+    private GeoInfo geoInfo;
+    private int signerId;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean isPinned;
+    private boolean markedAsAds;
+    private boolean isFavorite;
+    private DonutInfo donutInfo;
+    private int postponedId;
 
     public int getId() {
         return id;
@@ -33,107 +43,187 @@ public class Post {
         this.ownerId = ownerId;
     }
 
-    public int getAmountOfViews() {
-        return amountOfViews;
+    public int getFromId() {
+        return fromId;
     }
 
-    public void setAmountOfViews(int amountOfViews) {
-        this.amountOfViews = amountOfViews;
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
     }
 
-    public int getPublicationTime() {
-        return publicationTime;
+    public int getCreatedById() {
+        return createdById;
     }
 
-    public void setPublicationTime(int publicationTime) {
-        this.publicationTime = publicationTime;
+    public void setCreatedById(int createdById) {
+        this.createdById = createdById;
     }
 
-    public Privacy getPrivacy() {
-        return privacy;
+    public int getDate() {
+        return date;
     }
 
-    public void setPrivacy(Privacy privacy) {
-        this.privacy = privacy;
+    public void setDate(int date) {
+        this.date = date;
     }
 
-    public int[] getWhoCanSeeId() {
-        return whoCanSeeId;
+    public String getText() {
+        return text;
     }
 
-    public void setWhoCanSeeId(int[] whoCanSeeId) {
-        this.whoCanSeeId = whoCanSeeId;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public Subject getSubject() {
-        return subject;
+    public int getReplyOwnerId() {
+        return replyOwnerId;
     }
 
-    public void setSubject(Subject subject) {
-        this.subject = subject;
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
     }
 
-    public int[] getWhoRepostId() {
-        return whoRepostId;
+    public int getReplyPostId() {
+        return replyPostId;
     }
 
-    public void setWhoRepostId(int[] whoRepostId) {
-        this.whoRepostId = whoRepostId;
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
     }
 
-    public int[] getWhoLikedId() {
-        return whoLikedId;
+    public boolean isFriendsOnly() {
+        return friendsOnly;
     }
 
-    public void setWhoLikedId(int[] whoLikedId) {
-        this.whoLikedId = whoLikedId;
+    public void setFriendsOnly(boolean friendsOnly) {
+        this.friendsOnly = friendsOnly;
     }
 
-    public CommentInfo[] getCommentsInfoId() {
-        return commentsInfoId;
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
     }
 
-    public void setCommentsInfoId(CommentInfo[] commentsInfoId) {
-        this.commentsInfoId = commentsInfoId;
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
     }
 
-    public String getContent() {
-        return content;
+    public CopyrightInfo getCopyrightInfo() {
+        return copyrightInfo;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setCopyrightInfo(CopyrightInfo copyrightInfo) {
+        this.copyrightInfo = copyrightInfo;
     }
 
-    public boolean isCommentable() {
-        return isCommentable;
+    public LikesInfo getLikesInfo() {
+        return likesInfo;
     }
 
-    public void setCommentable(boolean commentable) {
-        isCommentable = commentable;
+    public void setLikesInfo(LikesInfo likesInfo) {
+        this.likesInfo = likesInfo;
     }
 
-    public boolean isSendNotification() {
-        return isSendNotification;
+    public RepostsInfo getRepostsInfo() {
+        return repostsInfo;
     }
 
-    public void setSendNotification(boolean sendNotification) {
-        isSendNotification = sendNotification;
+    public void setRepostsInfo(RepostsInfo repostsInfo) {
+        this.repostsInfo = repostsInfo;
     }
 
-    public String getSource() {
-        return source;
+    public ViewsInfo getViewsInfo() {
+        return viewsInfo;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public void setViewsInfo(ViewsInfo viewsInfo) {
+        this.viewsInfo = viewsInfo;
     }
 
-    public int getCopyrightUserId() {
-        return copyrightUserId;
+    public String getPostType() {
+        return postType;
     }
 
-    public void setCopyrightUserId(int copyrightUserId) {
-        this.copyrightUserId = copyrightUserId;
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public GeoInfo getGeoInfo() {
+        return geoInfo;
+    }
+
+    public void setGeoInfo(GeoInfo geoInfo) {
+        this.geoInfo = geoInfo;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public DonutInfo getDonutInfo() {
+        return donutInfo;
+    }
+
+    public void setDonutInfo(DonutInfo donutInfo) {
+        this.donutInfo = donutInfo;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
     }
 }
